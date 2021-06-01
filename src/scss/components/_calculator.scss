@@ -1,0 +1,19 @@
+.calculator-grid {
+  display: grid;
+  grid-gap: 10px;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  &__item {
+    height: 280px;
+    background: $dark;
+    box-shadow: -7px -7px 10px #272b3140;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+}

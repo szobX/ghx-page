@@ -1,0 +1,115 @@
+@each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size, $lengths in $spacers {
+        $length-x: map-get($lengths, x);
+        $length-y: map-get($lengths, y);
+
+        .#{$abbrev}a-#{$size} {
+            #{$prop}: $length-y $length-x !important;
+        }
+
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-top: $length-y !important;
+            #{$prop}-bottom: $length-y !important;
+        }
+
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-left: $length-x !important;
+            #{$prop}-right: $length-x !important;
+        }
+
+        .#{$abbrev}t-#{$size} {
+            #{$prop}-top: $length-y !important;
+        }
+
+        .#{$abbrev}r-#{$size} {
+            #{$prop}-right: $length-x !important;
+        }
+
+        .#{$abbrev}b-#{$size} {
+            #{$prop}-bottom: $length-y !important;
+        }
+
+        .#{$abbrev}l-#{$size} {
+            #{$prop}-left: $length-x !important;
+        }
+
+        @each $screen-size, $screen-value in $grid-breakpoints {
+            @media all and (min-width: #{$screen-value}) {
+                .#{$abbrev}a-#{$screen-size}-#{$size} {
+                    #{$prop}: $length-y $length-x !important;
+                }
+
+                .#{$abbrev}y-#{$screen-size}-#{$size} {
+                    #{$prop}-top: $length-y !important;
+                    #{$prop}-bottom: $length-y !important;
+                }
+
+                .#{$abbrev}x-#{$screen-size}-#{$size} {
+                    #{$prop}-left: $length-x !important;
+                    #{$prop}-right: $length-x !important;
+                }
+
+                .#{$abbrev}t-#{$screen-size}-#{$size} {
+                    #{$prop}-top: $length-y !important;
+                }
+
+                .#{$abbrev}r-#{$screen-size}-#{$size} {
+                    #{$prop}-right: $length-x !important;
+                }
+
+                .#{$abbrev}b-#{$screen-size}-#{$size} {
+                    #{$prop}-bottom: $length-y !important;
+                }
+
+                .#{$abbrev}l-#{$screen-size}-#{$size} {
+                    #{$prop}-left: $length-x !important;
+                }
+            }
+        }
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin bg-variant($parent, $color) {
+    #{$parent} {
+        background-color: $color;
+    }
+}
+
+@mixin text-variant($parent, $color) {
+    #{$parent} {
+        color: $color !important;
+        caret-color: $color !important;
+    }
+}
+@mixin text-weight($parent, $weight) {
+    #{$parent} {
+        font-weight: $weight !important;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    @include bg-variant('.bg--#{$color}', $value);
+    @include text-variant('.text--#{$color}', $value);
+}
+
+@each $weight, $value in $font-weight {
+    @include text-weight('.text--#{$weight}', $value);
+}

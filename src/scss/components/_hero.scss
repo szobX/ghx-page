@@ -1,0 +1,43 @@
+.hero {
+  background: transparent
+    radial-gradient(closest-side at 50% 48%, #2c3138 0%, #171a1f 100%) 0% 0%
+    no-repeat padding-box;
+    // background-image: url('images/content/miningtext.svg');
+  min-height: calc(100vh + 80px);
+  @extend .center-parent;
+  &__content {
+    @extend .center-parent;
+    flex-direction: column;
+  }
+  &__arrow {
+    padding-top: 108px;
+    animation: arrow infinite 1s;
+    cursor: pointer;
+  }
+  &__menu{
+    flex-wrap:wrap;
+    transform: translateY(-47px);
+    left:0;
+    display: flex;
+    @include media-breakpoint-down(lg){
+      transform: translateY(0);
+      font-size:24px !important;
+    }
+    @include media-breakpoint-down(md){
+      flex-direction: column;
+      position:relative;
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

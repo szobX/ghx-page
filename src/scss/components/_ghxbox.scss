@@ -1,0 +1,31 @@
+.ghx-box {
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #0000004d;
+  background: transparent
+    radial-gradient(closest-side at 50% 48%, #2c3138 0%, #171a1f 100%) 0% 0%;
+  margin-top: -70px;
+  @include media-breakpoint-down(md) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__body {
+    padding: 0 34px;
+  }
+  &__footer {
+    height: 110px;
+    background: $dark;
+    @extend .center-parent;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__animation {
+    padding: 66px 0 20px 0;
+    &--content {
+      max-width: 256px;
+      margin: auto;
+      width: 100%;
+    }
+  }
+}

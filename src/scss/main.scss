@@ -1,0 +1,17 @@
+@import 'utils/fonts';
+@import "utils/variables";
+@import "utils/breakpoints";
+@import "utils/mixins";
+@import "utils/reset";
+@import "components/buttons";
+@import "base";
+
+@import "components/header";
+@import "components/hero";
+@import "components/select2-custom";
+@import "components/mining";
+@import "components/others";
+@import "components/ghxbox";
+@import "components/calculator";
+@import "components/modal";
+@import "components/inputs";

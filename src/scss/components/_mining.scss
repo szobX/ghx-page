@@ -1,0 +1,15 @@
+.mining-group {
+  position: relative;
+  padding-top: 100px;
+  overflow:hidden;
+  width: 100%;
+  text-align: center;
+  img.text {
+    max-width: 80vw;
+    width:100%;
+  }
+  .astro {
+    position: absolute;
+    transform: translate(-231px, -113px);
+  }
+}

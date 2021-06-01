@@ -1,0 +1,158 @@
+button,
+.btn {
+  display: inline-block;
+  min-height: 48px;
+  padding: 0 20px;
+  color: $light;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $gray;
+  border-radius: 5px;
+
+  transition-duration: 0.3s;
+  transition-property: background-color, color, border-color;
+
+  &:hover {
+   
+    color: #fff;
+      border-color: $white;
+  }
+
+
+
+
+
+  &.btn--green {
+    color: $light;
+    background-color: $green;
+    border: 1px solid $green;
+    
+    box-shadow: -5px -5px 10px #E2FFEE;
+    width:100%;
+    &:hover:not([disabled]),
+    &:active:not([disabled]),
+    &:active:focus:not([disabled]) {
+      background-color: $green-hover;
+    }
+
+    &[disabled] {
+      color: $gray;
+      background-color: $white;
+      border-color: $gray;
+      cursor: default;
+    }
+  }
+
+  &--xs {
+    min-width: 138px;
+    min-height: 35px;
+    line-height: 32px;
+  }
+
+  &--sm {
+    min-width: 144px;
+  }
+
+  &--md {
+    min-width: 218px;
+  }
+}
+button::hover {
+  color: green;
+}
+a,
+.link {
+  cursor: pointer;
+  min-width: auto;
+  min-height: auto;
+  padding: 0;
+  line-height: 1;
+  text-align: left;
+  vertical-align: baseline;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: $gray;
+  &:hover:not([disabled]),
+  &:focus:not([disabled]),
+  &:active:not([disabled]),
+  &:active:focus:not([disabled]) {
+    color: $light-gray;
+    background-color: transparent;
+  }
+
+  &--semiBold {
+    font-weight: 600;
+    font-size: 32px;
+    &:hover:not([disabled]),
+    &:focus:not([disabled]),
+    &:active:not([disabled]),
+    &:active:focus:not([disabled]),
+    &.active {
+      color: $light-gray;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+// .btn--wishlist {
+//   position: absolute;
+//   top: 15px;
+//   right: 15px;
+
+//   .icon:not(.icon--soft-red) {
+//     path,
+//     circle,
+//     rect {
+//       fill: #000;
+//     }
+
+//     @include media-breakpoint-up(lg) {
+//       width: 23px;
+//       height: 19px;
+//     }
+//   }
+// }
+
+.full-min-width {
+  min-width: 100%;
+}
+
+.calculator-btn {
+  display: flex;
+  padding: 16px 20px;
+  max-width: 280px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  line-height: normal;
+  text-align: left;
+  div {
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &:hover {
+    background: $light;
+    color: $dark;
+    path,
+    svg,
+    .e,
+    .d,
+    .f {
+      stroke: $dark;
+      transition-duration: 0.3s;
+
+      fill: $light;
+    }
+  }
+}

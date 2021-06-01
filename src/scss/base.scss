@@ -1,0 +1,308 @@
+body {
+  background: $light;
+  color: $gray;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+.center-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.m-auto {
+  margin: auto;
+}
+.display-2 {
+  font-size: 34px;
+}
+.container {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-left: 8px;
+
+  @include media-breakpoint-up(sm) {
+    max-width: 540px;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 720px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 960px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: 1180px;
+  }
+}
+.font--14 {
+  font-size: 14px !important;
+}
+.font--32 {
+  font-size: 32px !important;
+}
+.font--20 {
+  font-size: 20px !important;
+}
+.font--18 {
+  font-size: 18px !important;
+}
+.font--36 {
+  font-size: 36px !important;
+}
+.font--24 {
+  font-size: 24px !important;
+}
+h2 {
+  @extend .font--36;
+}
+h3 {
+  @extend .font--32;
+}
+
+.full__width {
+  width: 100%;
+}
+
+.full__height {
+  height: 100%;
+}
+
+.full__size {
+  width: 100%;
+  height: 100%;
+}
+
+.half__width {
+  width: 50%;
+}
+
+.width__0 {
+  width: 0;
+}
+.width__980 {
+  max-width: 980px;
+  width: 100%;
+}
+.position--relative {
+  position: relative;
+}
+
+.position--absolute {
+  position: absolute;
+}
+
+.justify--center {
+  justify-content: center !important;
+}
+
+.justify--space-between {
+  justify-content: space-between !important;
+}
+
+.justify--start {
+  justify-content: flex-start !important;
+}
+
+.justify--end {
+  justify-content: flex-end !important;
+}
+
+.align--center {
+  align-items: center !important;
+}
+
+.align--start {
+  align-items: flex-start !important;
+}
+
+.align--end {
+  align-items: flex-end;
+}
+
+.align-self--end {
+  align-self: flex-end;
+}
+
+.align-self--center {
+  align-self: center;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.shrink {
+  flex-shrink: 1;
+}
+
+.no-shrink {
+  flex-shrink: 0;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.text--left {
+  text-align: left !important;
+}
+
+.text--center {
+  text-align: center !important;
+}
+
+.text--right {
+  text-align: right !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.direction--ltr {
+  direction: ltr;
+}
+
+.direction--rtl {
+  direction: rtl;
+}
+
+.overflow-y--hidden {
+  overflow-y: hidden;
+}
+
+.position--relative {
+  position: relative !important;
+}
+
+.position--static {
+  position: static !important;
+}
+
+.position--absolute {
+  position: absolute !important;
+}
+
+.vertical-align--middle {
+  vertical-align: middle;
+}
+
+.vertical-align--bottom {
+  vertical-align: bottom;
+}
+
+.vertical-align--top {
+  vertical-align: top;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.rotate--180 {
+  transform: rotate(180deg);
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.visibility--hidden {
+  visibility: hidden;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+.lh-18 {
+  line-height: 18px !important;
+}
+
+.flex-basis--auto {
+  flex-basis: auto !important;
+}
+
+.d-lg-block {
+  @include media-breakpoint-up(lg) {
+    display: block !important;
+  }
+}
+
+.d-lg-flex {
+  @include media-breakpoint-up(lg) {
+    display: flex !important;
+  }
+}
+.row {
+  display: flex;
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+}
+.column {
+  &--50 {
+    max-width: 50%;
+    width: 100%;
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+    }
+  }
+}
+.section--dark {
+  background: $darker;
+  color: $light;
+}
+.section-padding {
+  &--120 {
+    padding: 120px 0;
+  }
+}

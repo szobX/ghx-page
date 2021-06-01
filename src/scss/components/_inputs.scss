@@ -1,0 +1,46 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.input-group {
+  margin-bottom: 10px;
+  input.input-grou--error {
+    color: $red !important;
+    border-color: $red !important;
+  }
+  &--error {
+    color: $red;
+    input {
+      font-size: 14px;
+
+      border-color: $red;
+      color: $red;
+      &::placeholder {
+        color: $red;
+      }
+    }
+  }
+}
+.input-control {
+  border: 1px solid $light-gray;
+  border-radius: 3px;
+  outline: none;
+  background: $light;
+  padding: 10px 17px;
+  font-size: 18px;
+  color: $gray;
+  width: 100%;
+  font-weight: 500;
+
+  &::placeholder {
+    font-size: 18px;
+    color: $gray;
+    font-family: "Rajdhani", sans-serif;
+
+    font-weight: 500;
+  }
+  &:hover,
+  &:focus {
+    border-color: $dark;
+  }
+}

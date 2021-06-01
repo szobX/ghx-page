@@ -1,0 +1,22 @@
+.select2-custom-currency {
+  max-width: 355px;
+  width: 100%;
+}
+.wallet-id{
+font-family: 'Klavika', sans-serif;
+}
+.copy{
+  cursor:pointer;
+}
+
+.copy-tooltip{
+  display: none;
+position: absolute;
+background:$light;
+padding:5px 10px;
+font-size:14px;
+left:50%;
+top:0;
+border-radius: 10px;
+transform: translate(-50%,-120%);
+}
